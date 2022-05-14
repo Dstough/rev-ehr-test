@@ -7,6 +7,7 @@ The two basic pieces of this program are the Refraction class and the Refraction
 I put these two classes in a module, so they can be reused by other components later.
 The emphasis is on readability of the code to not clutter it up with an excessive amount of comments.
 I strive for full variable names in place of abbreviations to further this goal.
+
 ---
 
 There are a few things that still need clarification and may require the package to be touched up in the future.
