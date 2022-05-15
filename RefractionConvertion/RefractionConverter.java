@@ -29,4 +29,18 @@ public class RefractionConverter
         refraction.setCylinderPower(cylinderPower);
         refraction.setAxis(axis);
     }
+
+    public static Refraction ParseRefraction(String input) throws Exception
+    {
+        var value = input.split(" ");
+
+        if(value.length != 3)
+            throw new Exception(String.format("Could not parse refraction \"%s\". Invalid data format.", input));
+
+        var spherePower = Float.parseFloat(value[0]);
+        var cylinderPower = Float.parseFloat(value[1]);
+        var axis = Float.parseFloat(value[2].replace("x", ""));
+
+        return new Refraction(spherePower, cylinderPower, axis);
+    }
 }

@@ -19,7 +19,7 @@ public class Refraction
         if (value < -25.0 || value > 25.0)
             throw new Exception(String.format("Sphere Power %s is incorrect. Must be between -25 and 25.", value));
 
-        //TODO: Confirm if this needs to be rounded to nearest increment of .25 units (requirements say "normally" not "always")
+        //TODO: Confirm if this needs to be rounded to the nearest increment of .25 units (requirements say "normally" not "always")
 
         this.SpherePower = value;
     }
