@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.io.File;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import RefractionConvertion.*;
@@ -9,9 +9,12 @@ public class Main
     {
         try
         {
-            var file = "refractions.txt";
+            var file = new File(args[0]);
 
-            try (var reader = new BufferedReader(new FileReader(file)))
+            if(!file.exists())
+                throw new Exception("Data file doesn't exist or is not accessible");
+
+            try (var reader = new BufferedReader(new FileReader(args[0])))
             {
                 String line;
                 var lineNumber = 0;

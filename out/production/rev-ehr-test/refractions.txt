@@ -1,4 +1,3 @@
 -3.75 +2.00 x154
 hello world
-my name is
 -5.50 +4.15 x180

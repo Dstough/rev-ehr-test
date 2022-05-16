@@ -1,4 +1,5 @@
 package RefractionConvertion;
+import java.util.regex.Pattern;
 
 public class RefractionConverter
 {
@@ -32,11 +33,15 @@ public class RefractionConverter
 
     public static Refraction ParseRefraction(String input) throws Exception
     {
-        var value = input.split(" ");
+        //TODO: Verify if a valid data format is only the Cylinder Power and Axis alone.
+        // This type of pattern: -3.75 +2.00 x154
+        var pattern = Pattern.compile("[+|-]\\d\\.\\d{2} [+|-]\\d\\.\\d{2} x\\d{3}");
+        var matcher = pattern.matcher(input);
 
-        if(value.length != 3)
+        if(!matcher.find())
             throw new Exception(String.format("Could not parse refraction \"%s\". Invalid data format.", input));
 
+        var value = input.split(" ");
         var spherePower = Float.parseFloat(value[0]);
         var cylinderPower = Float.parseFloat(value[1]);
         var axis = Float.parseFloat(value[2].replace("x", ""));
