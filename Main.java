@@ -1,7 +1,8 @@
 import java.io.File;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import RefractionConvertion.*;
+
+import RefractionConvertion.Util.RefractionConverter;
 
 public class Main
 {

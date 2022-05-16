@@ -1,4 +1,4 @@
-package RefractionConvertion;
+package RefractionConvertion.Model;
 
 public class Refraction
 {

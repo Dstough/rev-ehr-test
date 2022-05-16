@@ -1,4 +1,6 @@
-package RefractionConvertion;
+package RefractionConvertion.Util;
+
+import RefractionConvertion.Model.Refraction;
 import java.util.regex.Pattern;
 
 public class RefractionConverter
