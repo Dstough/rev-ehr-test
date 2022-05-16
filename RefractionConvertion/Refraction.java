@@ -29,7 +29,7 @@ public class Refraction
         return this.SpherePower;
     }
 
-    public void setCylinderPower(float value) throws Exception
+    public void setCylinderPower(float value)
     {
         //TODO: Confirm if this needs to enforce +/- 15.00 (requirements say "generally" not "always")
 
